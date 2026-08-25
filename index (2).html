@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- =========================
+         BASIC SEO
+    ========================== -->
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        CGPA & SGPA Calculator – Calculate Your CGPA and SGPA
+    </title>
+
+    <meta
+        name="description"
+        content="Free CGPA and SGPA calculator for college and engineering students. Calculate your semester SGPA and overall CGPA using subject credits and grades."
+    >
+
+    <meta
+        name="keywords"
+        content="CGPA calculator, SGPA calculator, CGPA calculator India, SGPA calculator India, BTech CGPA calculator, college CGPA calculator"
+    >
+
+    <meta
+        name="robots"
+        content="index, follow"
+    >
+
+    <meta
+        name="author"
+        content="Toolfunia"
+    >
+
+
+    <!-- =========================
+         OPEN GRAPH
+    ========================== -->
+
+    <meta
+        property="og:title"
+        content="CGPA & SGPA Calculator"
+    >
+
+    <meta
+        property="og:description"
+        content="Calculate your CGPA and SGPA quickly using subject grades and credits."
+    >
+
+    <meta
+        property="og:type"
+        content="website"
+    >
+
+
+    <!-- =========================
+         FONT
+    ========================== -->
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =========================
+         CSS
+    ========================== -->
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+
+    <!-- =========================
+         STRUCTURED DATA
+    ========================== -->
+
+    <script type="application/ld+json">
+
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "CGPA & SGPA Calculator",
+        "description": "Free CGPA and SGPA calculator for students.",
+        "applicationCategory": "EducationalApplication",
+        "operatingSystem": "All"
+    }
+
+    </script>
+
+</head>
+
+
+<body>
+
+
+<!-- ==================================================
+     HEADER / NAVIGATION
+=================================================== -->
+
+<header class="header">
+
+    <div class="logo">
+
+        <div class="logo-icon">
+            T
+        </div>
+
+        <span>
+            SGPA/CGPA CALC
+        </span>
+
+    </div>
+
+
+    <nav class="navigation">
+
+        <a
+            href="#calculator"
+            class="nav-link"
+        >
+            Calculator
+        </a>
+
+        <a
+            href="#how-cgpa"
+            class="nav-link"
+        >
+            How It Works
+        </a>
+
+        <a
+            href="#faq"
+            class="nav-link"
+        >
+            FAQ
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- ==================================================
+     BREADCRUMB
+=================================================== -->
+
+<div class="breadcrumb">
+
+    <a href="/">
+        🏠 Home
+    </a>
+
+    <span>
+        ›
+    </span>
+
+    <strong>
+        CGPA & SGPA Calculator
+    </strong>
+
+</div>
+
+
+
+<!-- ==================================================
+     MAIN CONTENT
+=================================================== -->
+
+<main class="container">
+
+
+<!-- ==================================================
+     HERO
+=================================================== -->
+
+<section class="hero">
+
+    <h1>
+
+        CGPA &
+
+        <span>
+            SGPA Calculator
+        </span>
+
+    </h1>
+
+
+    <p>
+
+        Calculate your semester SGPA and overall CGPA
+        easily using your subject grades and credit hours.
+        This free calculator is designed for college,
+        university and engineering students.
+
+    </p>
+
+</section>
+
+
+
+<!-- ==================================================
+     CALCULATOR
+=================================================== -->
+
+<section
+    id="calculator"
+    aria-labelledby="calculator-heading"
+>
+
+
+    <div class="tabs">
+
+        <button
+            type="button"
+            class="tab active"
+            id="sgpaTabButton"
+            onclick="showCalculator('sgpa')"
+        >
+
+            SGPA Calculator
+
+        </button>
+
+
+        <button
+            type="button"
+            class="tab"
+            id="cgpaTabButton"
+            onclick="showCalculator('cgpa')"
+        >
+
+            CGPA Calculator
+
+        </button>
+
+    </div>
+
+
+
+    <!-- =========================
+         SGPA CALCULATOR
+    ========================== -->
+
+    <div
+        id="sgpaCalculator"
+    >
+
+        <div class="calculator">
+
+            <div class="calculator-header">
+
+                <div>
+
+                    <h2 id="calculator-heading">
+
+                        Semester SGPA Calculator
+
+                    </h2>
+
+                    <p class="calculator-description">
+
+                        Add your subjects, credits and grades
+                        to calculate your SGPA.
+
+                    </p>
+
+                </div>
+
+
+                <div class="badge">
+
+                    10 POINT SCALE
+
+                </div>
+
+            </div>
+
+
+            <!-- TABLE HEADER -->
+
+            <div class="table-head">
+
+                <div>
+                    Subject
+                </div>
+
+                <div>
+                    Credits
+                </div>
+
+                <div>
+                    Grade
+                </div>
+
+                <div></div>
+
+            </div>
+
+
+            <!-- SUBJECTS -->
+
+            <div
+                id="subjectContainer"
+            ></div>
+
+
+            <!-- ACTION BUTTONS -->
+
+            <div class="buttons">
+
+                <button
+                    type="button"
+                    class="btn btn-primary"
+                    onclick="addSubject()"
+                >
+
+                    + Add Subject
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="btn"
+                    onclick="clearSubjects()"
+                >
+
+                    Clear
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- SGPA RESULT -->
+
+        <div class="result-section">
+
+
+            <div class="result-card dark">
+
+                <div class="result-title">
+
+                    Your SGPA
+
+                </div>
+
+                <div
+                    class="result-number"
+                    id="sgpaResult"
+                >
+
+                    0.00
+
+                </div>
+
+                <div
+                    class="result-subtitle"
+                    id="sgpaMessage"
+                >
+
+                    Add subjects
+
+                </div>
+
+            </div>
+
+
+            <div class="result-card">
+
+                <div class="result-title">
+
+                    Total Credits
+
+                </div>
+
+                <div
+                    class="result-number"
+                    id="totalCredits"
+                >
+
+                    0
+
+                </div>
+
+                <div class="result-subtitle">
+
+                    Credits
+
+                </div>
+
+            </div>
+
+
+            <div class="result-card">
+
+                <div class="result-title">
+
+                    Grade Points
+
+                </div>
+
+                <div
+                    class="result-number"
+                    id="totalPoints"
+                >
+
+                    0.00
+
+                </div>
+
+                <div class="result-subtitle">
+
+                    Credit × Grade Point
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================
+         CGPA CALCULATOR
+    ========================== -->
+
+    <div
+        id="cgpaCalculator"
+        class="hidden"
+    >
+
+        <div class="calculator">
+
+            <div class="calculator-header">
+
+                <div>
+
+                    <h2>
+
+                        Overall CGPA Calculator
+
+                    </h2>
+
+                    <p class="calculator-description">
+
+                        Enter your semester SGPA and credits
+                        to calculate your overall CGPA.
+
+                    </p>
+
+                </div>
+
+
+                <div class="badge">
+
+                    CREDIT WEIGHTED
+
+                </div>
+
+            </div>
+
+
+            <!-- TABLE HEADER -->
+
+            <div class="table-head">
+
+                <div>
+                    Semester
+                </div>
+
+                <div>
+                    SGPA
+                </div>
+
+                <div>
+                    Credits
+                </div>
+
+                <div></div>
+
+            </div>
+
+
+            <!-- SEMESTERS -->
+
+            <div
+                id="semesterContainer"
+            ></div>
+
+
+            <!-- ACTION BUTTONS -->
+
+            <div class="buttons">
+
+                <button
+                    type="button"
+                    class="btn btn-primary"
+                    onclick="addSemester()"
+                >
+
+                    + Add Semester
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="btn"
+                    onclick="clearSemesters()"
+                >
+
+                    Clear
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- CGPA RESULT -->
+
+        <div class="result-section">
+
+
+            <div class="result-card dark">
+
+                <div class="result-title">
+
+                    Your CGPA
+
+                </div>
+
+                <div
+                    class="result-number"
+                    id="cgpaResult"
+                >
+
+                    0.00
+
+                </div>
+
+                <div
+                    class="result-subtitle"
+                    id="cgpaMessage"
+                >
+
+                    Add semesters
+
+                </div>
+
+            </div>
+
+
+            <div class="result-card">
+
+                <div class="result-title">
+
+                    Total Credits
+
+                </div>
+
+                <div
+                    class="result-number"
+                    id="cgpaCredits"
+                >
+
+                    0
+
+                </div>
+
+                <div class="result-subtitle">
+
+                    Completed Credits
+
+                </div>
+
+            </div>
+
+
+            <div class="result-card">
+
+                <div class="result-title">
+
+                    Semesters
+
+                </div>
+
+                <div
+                    class="result-number"
+                    id="semesterCount"
+                >
+
+                    0
+
+                </div>
+
+                <div class="result-subtitle">
+
+                    Completed
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     HOW CGPA IS CALCULATED
+=================================================== -->
+
+<section
+    class="content-section"
+    id="how-cgpa"
+>
+
+    <h2>
+        How is CGPA calculated?
+    </h2>
+
+
+    <p>
+
+        CGPA stands for Cumulative Grade Point Average.
+        It represents your overall academic performance
+        across multiple semesters.
+
+    </p>
+
+
+    <div class="formula-box">
+
+        <strong>
+            CGPA =
+        </strong>
+
+        Σ (SGPA × Semester Credits)
+        ÷
+        Σ (Semester Credits)
+
+    </div>
+
+
+    <p>
+
+        For example, if your semesters have different
+        credit totals, each semester is weighted according
+        to the number of credits you completed.
+
+    </p>
+
+</section>
+
+
+
+<!-- ==================================================
+     HOW SGPA IS CALCULATED
+=================================================== -->
+
+<section
+    class="content-section"
+    id="how-sgpa"
+>
+
+    <h2>
+        How is SGPA calculated?
+    </h2>
+
+
+    <p>
+
+        SGPA stands for Semester Grade Point Average.
+        It measures your academic performance during
+        a single semester.
+
+    </p>
+
+
+    <div class="formula-box">
+
+        <strong>
+            SGPA =
+        </strong>
+
+        Σ (Credit × Grade Point)
+        ÷
+        Σ Credits
+
+    </div>
+
+
+    <p>
+
+        Each subject contributes to your SGPA according
+        to its credit value. A subject with more credits
+        therefore has a greater effect on your semester
+        SGPA.
+
+    </p>
+
+</section>
+
+
+
+<!-- ==================================================
+     CGPA VS SGPA
+=================================================== -->
+
+<section
+    class="content-section"
+    id="cgpa-vs-sgpa"
+>
+
+    <h2>
+        CGPA vs SGPA
+    </h2>
+
+
+    <div class="comparison-table">
+
+        <div class="comparison-row comparison-header">
+
+            <div>
+                SGPA
+            </div>
+
+            <div>
+                CGPA
+            </div>
+
+        </div>
+
+
+        <div class="comparison-row">
+
+            <div>
+                Measures performance for one semester.
+            </div>
+
+            <div>
+                Measures overall performance across semesters.
+            </div>
+
+        </div>
+
+
+        <div class="comparison-row">
+
+            <div>
+                Calculated using subjects from a semester.
+            </div>
+
+            <div>
+                Calculated using multiple semesters.
+            </div>
+
+        </div>
+
+
+        <div class="comparison-row">
+
+            <div>
+                Can change significantly each semester.
+            </div>
+
+            <div>
+                Changes gradually as more semesters are completed.
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     FAQ
+=================================================== -->
+
+<section
+    class="content-section"
+    id="faq"
+>
+
+    <h2>
+        Frequently Asked Questions
+    </h2>
+
+
+    <details>
+
+        <summary>
+            What is SGPA?
+        </summary>
+
+        <p>
+
+            SGPA stands for Semester Grade Point Average.
+            It represents your academic performance for
+            a particular semester.
+
+        </p>
+
+    </details>
+
+
+    <details>
+
+        <summary>
+            What is CGPA?
+        </summary>
+
+        <p>
+
+            CGPA stands for Cumulative Grade Point Average.
+            It represents your overall academic performance
+            across multiple semesters.
+
+        </p>
+
+    </details>
+
+
+    <details>
+
+        <summary>
+            How is SGPA calculated?
+        </summary>
+
+        <p>
+
+            SGPA is calculated by multiplying each subject's
+            credit by its grade point, adding the results,
+            and dividing by the total number of credits.
+
+        </p>
+
+    </details>
+
+
+    <details>
+
+        <summary>
+            How is CGPA calculated?
+        </summary>
+
+        <p>
+
+            CGPA can be calculated by taking the
+            credit-weighted average of your semester SGPAs.
+
+        </p>
+
+    </details>
+
+
+    <details>
+
+        <summary>
+            Is this calculator free?
+        </summary>
+
+        <p>
+
+            Yes. The calculator is free to use and does not
+            require an account.
+
+        </p>
+
+    </details>
+
+
+    <details>
+
+        <summary>
+            Can I use this calculator on my phone?
+        </summary>
+
+        <p>
+
+            Yes. The calculator is designed to work on
+            smartphones, tablets and desktop computers.
+
+        </p>
+
+    </details>
+
+</section>
+
+
+
+<!-- ==================================================
+     ADVERTISEMENT
+=================================================== -->
+
+<section
+    class="ad-section"
+    aria-label="Advertisement"
+>
+
+    <div class="ad-label">
+        Advertisement
+    </div>
+
+
+    <!--
+        Google AdSense code can be placed here
+        after your website is approved.
+    -->
+
+    <div class="ad-placeholder">
+
+        Advertisement
+
+    </div>
+
+</section>
+
+
+
+</main>
+
+
+
+<!-- ==================================================
+     FOOTER
+=================================================== -->
+
+<footer class="footer">
+
+    <div class="footer-logo">
+
+        Toolfunia
+
+    </div>
+
+
+    <p>
+
+        Simple, fast and free online calculators
+        for students.
+
+    </p>
+
+
+    <div class="footer-links">
+
+        <a href="#">
+            Home
+        </a>
+
+        <a href="#calculator">
+            Calculator
+        </a>
+
+        <a href="#faq">
+            FAQ
+        </a>
+
+        <a href="#">
+            Privacy Policy
+        </a>
+
+        <a href="#">
+            Contact
+        </a>
+
+    </div>
+
+
+    <p class="copyright">
+
+        © 2026 CGPA CALC. All rights reserved.
+
+    </p>
+
+</footer>
+
+
+
+<!-- ==================================================
+     JAVASCRIPT
+=================================================== -->
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
